@@ -66,6 +66,12 @@ include_directories(
 add_executable(intra nodes/intra.cpp)
 target_link_libraries(intra ${catkin_LIBRARIES})
 
+add_executable(shared_ptr_speed nodes/shared_ptr_speed.cpp)
+target_link_libraries(shared_ptr_speed ${catkin_LIBRARIES})
+
+add_executable(shared_ptr_to_member nodes/shared_ptr_to_member.cpp)
+target_link_libraries(shared_ptr_to_member ${catkin_LIBRARIES})
+
 ## Add cmake target dependencies of the executable/library
 ## as an example, message headers may need to be generated before nodes
 # add_dependencies(ros_sandbox_node ros_sandbox_generate_messages_cpp)
