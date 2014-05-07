@@ -1,3 +1,12 @@
+/**
+ * Prove to myself that there is no speed difference between accessing shared_ptr's and
+ * accessing raw pointers.
+ *
+ * When creating/destroying shared_ptr's, an atomic operation is needed to change the reference
+ * count. This should slow things down a bit (I haven't tested that case yet). But in the case
+ * where we are simply accessing an object through a shared pointer, there shouldn't be any
+ * atomic operation, and the speed should be about the same as using a raw pointer.
+ */
 #include <ros/ros.h>
 #include <boost/shared_ptr.hpp>
 
