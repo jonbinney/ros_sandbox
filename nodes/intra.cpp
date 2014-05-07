@@ -1,3 +1,12 @@
+/**
+ * Demonstrate fast communication between threads using ROS pub/sub
+ *
+ * Key points:
+ *   - no messages get serialized (just const shared_ptr's passed within process)
+ *   - different components within this one node can have different remappings by
+ *     passing in a customized NodeHandle
+ */
+
 #include <ros/ros.h>
 #include <ros_sandbox/A.h>
 #include <boost/thread.hpp>
