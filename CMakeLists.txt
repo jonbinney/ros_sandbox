@@ -9,6 +9,7 @@ find_package(catkin REQUIRED COMPONENTS
 add_message_files(
   FILES
   A.msg
+  B.msg
 )
 
 ## Generate services in the 'srv' folder
@@ -71,6 +72,9 @@ target_link_libraries(shared_ptr_speed ${catkin_LIBRARIES})
 
 add_executable(shared_ptr_to_member nodes/shared_ptr_to_member.cpp)
 target_link_libraries(shared_ptr_to_member ${catkin_LIBRARIES})
+
+add_executable(boost_any_args nodes/boost_any_args.cpp)
+target_link_libraries(boost_any_args ${catkin_LIBRARIES})
 
 ## Add cmake target dependencies of the executable/library
 ## as an example, message headers may need to be generated before nodes
